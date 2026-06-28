@@ -10,11 +10,21 @@ left and right directions referenced in comments are from the robot's perspectiv
 */ 
 
 // include the QuadratureEncoder library
+
 #include <QuadratureEncoder.h>
 
 // include communications libraries
 
+#include <Adafruit_ICM20X.h>
+#include <Adafruit_ICM20948.h> 
+#include <Adafruit_Sensor.h>
+#include <Wire.h> // A4 is SDA, A5 is SCL
+
+
 // create icm object from ICM20948 class
+
+Adafruit_ICM20948 icm;
+
 
 //--------------------rover geometry parameters--------------------
 // motor_controller() uses these parameters to calculate wheel velocities
